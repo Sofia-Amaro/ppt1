@@ -11,6 +11,11 @@ input.onButtonPressed(Button.A, function () {
         valor = 1
     }
 })
+function resultado () {
+    if (valor == Azar) {
+        basic.showString("Empate")
+    }
+}
 input.onButtonPressed(Button.B, function () {
     for (let index = 0; index < 2; index++) {
         basic.showIcon(IconNames.Target)
