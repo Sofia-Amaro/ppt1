@@ -18,14 +18,14 @@ input.onButtonPressed(Button.B, function () {
         basic.showIcon(IconNames.Scissors)
     }
     Azar = randint(1, 3)
-    if (Azar == 0) {
+    if (Azar == 1) {
         basic.showIcon(IconNames.Target)
     } else if (Azar == 2) {
         basic.showIcon(IconNames.Square)
-    } else {
+    } else if (Azar == 3) {
         basic.showIcon(IconNames.Scissors)
     }
 })
 let Azar = 0
 let valor = 0
-valor = 0
+valor = 1
