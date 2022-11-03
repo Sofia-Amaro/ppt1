@@ -1,4 +1,8 @@
 input.onButtonPressed(Button.A, function () {
+    valor += 1
+    if (valor > 3) {
+        valor = 1
+    }
     if (valor == 1) {
         basic.showIcon(IconNames.Target)
     } else if (valor == 2) {
@@ -6,14 +10,18 @@ input.onButtonPressed(Button.A, function () {
     } else {
         basic.showIcon(IconNames.Scissors)
     }
-    valor += 1
-    if (valor > 3) {
-        valor = 1
-    }
 })
 function resultado () {
     if (valor == Azar) {
         basic.showString("Empate")
+    } else if (valor == 1 && Azar == 3) {
+        basic.showString("GANASTE ")
+    } else if (valor == 2 && Azar == 1) {
+        basic.showString("GANASTE ")
+    } else if (valor == 3 && Azar == 2) {
+        basic.showString("GANASTE")
+    } else {
+        basic.showString("PERDISTE")
     }
 }
 input.onButtonPressed(Button.B, function () {
@@ -30,7 +38,9 @@ input.onButtonPressed(Button.B, function () {
     } else if (Azar == 3) {
         basic.showIcon(IconNames.Scissors)
     }
+    resultado()
+    basic.clearScreen()
 })
 let Azar = 0
 let valor = 0
-valor = 1
+valor = 0
